@@ -1,98 +1,244 @@
-body {
-   margin: 130px 50px 0px 700px;
-   font-family: Arial, sans-serif;
-   background-color: aquamarine;
-   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-.container {
-  width: 500px;
-  height: 450px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 40px;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-  padding-top:20px;
-  padding: 16px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('imgback.jpg');
+    background-size: cover;
+    background-position: center;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo {
+    font-size: 2em;
+    color: rgb(19, 19, 19);
+    user-select: none;
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration:none;
+    font-weight: 500;
+    margin-left: 6rem;
+}
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background:white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
 }
 
-  h1 {
-    text-align: left;
-  }
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 10px 10px;
-    margin: 15px 0;
-    display: inline-block;
-    border: 3px solid hwb(108 7% 33% / 0.464);;
-    box-sizing: border-box;
+.navigation .loginbtn {
+    width: 5.5rem;
+    height: 2.4rem;
+    background: transparent;
+    border: 0.1em solid rgb(235, 235, 237);
+    outline: none;
     border-radius: 6px;
-    -webkit-border-radius: 6PX;
-    -moz-border-radius: 6PX;
-    -ms-border-radius: 6PX;
-    -o-border-radius: 6PX;
-}
-  button {
-    background-color: rgb(14, 161, 234);
-    border-radius: 6px;
-    color: rgb(6, 6, 6);
-    padding: 14px 20px;
-    margin: 10px 0;
-    border: rgba(229, 104, 14, 0.595);
     cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 4rem;
+    transition: .5s;
+}
+.navigation .loginbtn:hover {
+    background: rgb(211, 211, 235);
+    color: rgb(0, 0, 0);
+}
+.form {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(225, 225, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .form-box {
     width: 100%;
-    -webkit-border-radius: 6PX;
-    -moz-border-radius: 6PX;
-    -ms-border-radius: 6PX;
-    -o-border-radius: 6PX;
+    padding: 40px;
 }
-  button:hover {
-    opacity: 0.6;
-  }
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-  }
-  .signupbotton {
+.form-box h2 {
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.rform {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(225, 225, 255, 0.604);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rform .form-box {
+    width: 100%;
+    padding: 40px;
+}
+.rform-box h2 {
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.4s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+.remember-forget {
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input {
+    accent-color: black;
+    margin-right: 3px;
+}
+.remember-forget a {
+    color: black;
+    text-decoration: none;
+}
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: -13px;
-    width: 150px;
-    height: auto;
-  }
-  .newuser {
-  margin-bottom: 9px;
-  }
-  .signbtn {
-    text-align: left;
-  }
-  .backbtn {
-    margin-right: 41%;
-    text-transform: uppercase;
-    color:red;
-    text-align: right
-  }
-  .resetbtn {
-    width: 150px;
-    height: auto;
-    margin-left: 32%;
-  }
-  .description {
-    display:inline-block;
-    position:absolute;
-    top:27%;
-    left:6%;
-    /* margin-left: -640px; */
-    /* margin-top: -470px; */
-    font-family: 'Indie Flower', cursive;
-    color: rgb(247, 25, 9);
-    font-size: x-large;
-    /* border:2px solid black; */
-  }
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+.btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(226, 210, 210);
+}
+.rbtn {
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: -1em 0 -1.1em 0;
+    color: white;
+    font-weight: 500;
+}
+.rbtn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(227, 215, 215);
+}
+.login-register {
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover {
+    text-decoration: underline;
+}
+.login-already {
+    font-size: .9em;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-already p a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-already p a:hover {
+    text-decoration: underline;
+}
+
+
+

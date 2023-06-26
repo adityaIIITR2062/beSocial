@@ -1,44 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>social web App</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginpage</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
-
 <body>
-  <!-- <div class="container"> -->
-    <form class="container">
-      <h1 class="sign">SIGN IN</h1>
-      <label><i>USERNAME</i></label>
-      <input type="text" placeholder="Aditya@singh" name="uname" required>
-      <label><i>PASSWORD</i></label>
-      <input type="password" placeholder="Naveen@29" name="psw" required>
-      <button style="width: 498px; margin-left:.3%;" type="submit">SIGN IN</button><br>
-      <input type="checkbox" checked="checked">Remember me
-      <div>
-        <span class="psw"> <a href="index2.html">
-            <H3 style="color: red;">FORGET PASSWORD?</H3>
-          </a></span>
-        <H4 class="newuser">New User!</H4>
-        <div class="signbtn">
-          <a href="index1.html">
-            <H3 class="signupbotton"> <button type="button">SIGN UP</button></H3>
-          </a>
-        </div>
-      </div>
-  <!-- </div> -->
-  </form>
-  <div class="description">
-    <h2> Welcome to One Vision's Social Web App! </h2><br>
-    <h4> With a captivating design and intuitive layout, <br> our app offers a seamless user experience.<br>
-      Join us today and connect with friends, meet new people,<br> and engage in meaningful discussions. </h4>
-  </div>
-</body>
 
+    <header>
+        <h2 class="logo">One Vision</h2>
+        <nav class="navigation">
+            <a href="#">Explore</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <button class="loginbtn">Login</button>
+        </nav>
+    </header>
+    <div class="form">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon 
+                    name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon 
+                    name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forget">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forget password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a> </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="rform">
+        <div class="form-box registration">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                    <ion-icon name="person">
+                    </ion-icon></span>
+                    <input type="name" required>
+                    <label>Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon 
+                    name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon 
+                    name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon 
+                    name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Confirm Password</label>
+                </div>
+                <button type="submit" class="rbtn">Register</button>
+                <div class="login-already">
+                    <p>Already have an account?<a href="#" class="Login">Login</a> </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
