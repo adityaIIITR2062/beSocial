@@ -23,7 +23,7 @@
     </header>
     <div id="introLeft" class="introLeft">
         <h1>Welcome to beSocial</h1>
-        <p>be Social is the social media started with the initiative of Lorem ipsum, dolor sit amet consectetur
+        <p id="introLeftContent">be Social is the social media started with the initiative of Lorem ipsum, dolor sit amet consectetur
             adipisicing elit. Numquam nobis ea culpa error vel a temporibus, fuga officia quod voluptate sint facere
             neque animi tempora reprehenderit laudantium velit nesciunt mollitia laborum laboriosam id, ratione rem
             voluptas! Ullam delectus earum facilis sequi, cum perspiciatis molestiae dolorum possimus dolore corporis
@@ -92,9 +92,9 @@
                     <div class="remember-forget">
                         <!-- <p> -->
                             <input type="checkbox" id="rememberTick">
-                        <!-- <p id="rememberMe"> -->
+                        <p id="loginRememberMe">
                             Remember me
-                        <!-- </p> -->
+                        </p>
                         <!-- </p> -->
                         <!-- <label><input type="checkbox">
                             Remember me</label> -->
@@ -114,9 +114,17 @@
     </div>
 
     <script>
-        if (introRight.style.display=='block'){
-            introRight.style.display = 'none';
+        function intro(){
+            introLeftContent.style.display = 'block';
+            introLeftContent.style.transition= 'ease-in';
+
         }
+        function loginHome(){
+            introLeftContent.style.display = 'none';
+       }
+       setTimeout(intro,2000);
+        // if (introRight.style.display=='block'){
+        // }
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
