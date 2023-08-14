@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <!------------------------------------------------------ Navigation bar -------------------------------------------------->
+    <header>
+        <a class="logo"><img src="Be Social Logo.png" alt="besociallogo" class="logo-img"></a>
+        <nav class="nav">          
+        <div class="nav-icon">
+             <b class="independence-day">
+                <span><img src="independence -day.png"></span>
+                <h2 class="HAPPPY">HAPPY</h2>
+                <h2 class="INDEPENDENCE">INDEPENDENCE</h2>
+                <h2 class="DAY">DAY</h2>
+             </b>
+                <a href="#">
+                    <ion-icon name="notifications-outline"></ion-icon></a>
+            <a href="index3.html">
+                <ion-icon name="home-outline"></ion-icon></a>
+
+            <a href="#"><ion-icon
+                 name="chatbubble-ellipses-outline"></ion-icon></a>
+
+               <img src="profile-img/amit.jpg" class="user_img" alt="user img" 
+                onclick="toggleMenu()">
+               
+        </div>
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="profile-img/amit.jpg" class="user_img1">
+                    <h3>Amit Kumar</h3>
+                </div>
+                <hr>
+                <a href="profile.html" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <p>Edit Profile</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="settings"></ion-icon>
+                    </span>
+                    <p>Settings & Privacy</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="help"></ion-icon>
+                    </span>
+                    <p>Help & Support</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link" id="logoutButton">
+                    <span class="icon">
+                        <ion-icon name="log-out"></ion-icon>
+                    </span>
+                    <p>Logout</p>
+                    <span class="arrow">></span>
+                </a>
+            </div>
+           </div>
+        </nav>
+    </header>
+     <!-- ------------------------------------------profile-------------------------------------------------------------------------------- -->
+    <div class="profile-setting">
+           <!------------------------------------------------------user profile button---------------------------------------->
+           <div class="button">
+            <div>
+                <a href="#"><button class="user-profile-button" onclick="clickMenu()"><h3>User Profile</h3>  
+                </button></a>
+            </div>
+
+            <!-------------------------------------------------------user details button-------------------------------------->
+            <div>
+                <a href="#"><button type="button" class="user-details-button"><h3>User Details</h3></button></a>
+            </div>
+         </div>
+         <div class="intro">
+            <textarea rows="3" placeholder= "Write about yourself"></textarea>
+         </div>
+<!------------------------------------------------------user profile ---------------------------------------->
+         <div class="profile-info" id="userMenu">
+                <div class="user-profile-info">
+                    <div class="profile-img">
+                        <input type="file" name="profile" class="input-img">
+                    </div>
+                    <h3>Amit Kumar</h3>
+                    <h3>amit@besocial</h3>
+                    <hr>
+                </div>
+                <div class="your-images">
+                    <h3>Your Images</h3>
+                </div>
+                <div class="uploaded-img">
+                  <div>
+                    <div> <img src="profile-img/amit.jpg"></div>
+                    <div> <img src="profile-img/amit.jpg"></div>
+                  </div>
+                   <div>
+                    <div> <img src="profile-img/amit.jpg"></div>
+                    <div> <img src="profile-img/amit.jpg"></div>
+                   </div>
+                   <div>
+                    <div> <img src="profile-img/amit.jpg"></div>
+                    <div> <img src="profile-img/amit image.jpg"></div>
+                   </div>
+                </div>
+            </div>
+    </div>
+    <!--------------------------------------------------------------------- JS ------------------------------------------------------------->
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+    <script>
+        let userMenu= document.getElementById("userMenu");
+        function clickMenu(){
+            userMenu.classList.toggle("open-Menu");
+        }
+       
+    </script>
+</body>
+</html>
