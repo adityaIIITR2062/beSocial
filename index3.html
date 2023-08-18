@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>besocial</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <!------------------------------------------------------ Navigation bar -------------------------------------------------->
+    <header>
+        <a class="logo"><img src="Be Social Logo.png" alt="besociallogo" class="logo-img"></a>
+        <nav class="nav">          
+        <div class="nav-icon">
+             <b class="independence-day">
+                <span><img src="independence -day.png"></span>
+                <h2 class="HAPPPY">HAPPY</h2>
+                <h2 class="INDEPENDENCE">INDEPENDENCE</h2>
+                <h2 class="DAY">DAY</h2>
+             </b>
+                <a href="#">
+                    <ion-icon name="notifications-outline"></ion-icon></a>
+            <a href="index3.html">
+                <ion-icon name="home-outline"></ion-icon></a>
+
+            <a href="#"><ion-icon
+                 name="chatbubble-ellipses-outline"></ion-icon></a>
+
+               <img src="profile-img/amit.jpg" class="user_img" alt="user img" 
+                onclick="toggleMenu()">
+               
+        </div>
+           <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="profile-img/amit.jpg" class="user_img1">
+                    <h3>Amit Kumar</h3>
+                </div>
+                <hr>
+                <a href="profile.html" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <p>Edit Profile</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="settings"></ion-icon>
+                    </span>
+                    <p>Settings & Privacy</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <span class="icon">
+                        <ion-icon name="help"></ion-icon>
+                    </span>
+                    <p>Help & Support</p>
+                    <span class="arrow">></span>
+                </a>
+                <a href="#" class="sub-menu-link" id="logoutButton">
+                    <span class="icon">
+                        <ion-icon name="log-out"></ion-icon>
+                    </span>
+                    <p>Logout</p>
+                    <span class="arrow">></span>
+                </a>
+            </div>
+           </div>
+        </nav>
+    </header>
+
+    <div class="container">
+         <!-----------------------------------------------------left-sidebar ------------------------------------------------------------->
+        <div class="left-sidebar">
+           <div class="imp-links">
+            <a href="#"><span class="left-icon">
+                <ion-icon name="person-outline"></ion-icon></span></ion-icon>
+                <h3>Freinds</h3></a>
+            <a href="#"><span class="left-icon">
+                <ion-icon name="people-outline"></ion-icon> 
+            </span>
+                <h3>Group</h3></a>
+            <a href="news.html"><span class="left-icon">
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </span>
+                <h3>Latest News</h3></a>
+           </div>
+
+           <div class="story-gallary">
+            <div class="story">
+               <input type="file" name="Add-story">
+              <a> <span class="story-icon">
+                <ion-icon name="add-circle-outline"></ion-icon></a>
+            </span>
+                <p>Post Story</p>
+            </div>
+            <div class="story story1">
+                   <img src="profile-img/happyraj.jpg">
+                <p>Happy Raj</p>
+            </div>
+            <div class="story story1 story2">
+                <img src="profile-img/aditya singh.jpg">
+             <p>Aditya Singh</p>
+         </div>
+         <div class="story story1 story3">
+            <img src="profile-img/naveen.jpg">
+         <p>Naveen Kumar</p>
+         </div>
+         <div class="story story1 story4">
+           <img src="profile-img/aditya.jpg">
+           <p>Aditya Saini</p>
+         </div>
+
+        </div>
+
+        <div class="search-bar">
+            <h4>Search New Freind</h4>
+            <div id="search-box">
+                <span id="search-icon"><ion-icon name="search-outline"></ion-icon></span>
+                <input type="text" placeholder="Write Name or user name">
+            </div>
+        </div>
+        </div>
+        <!----------------------------------------------------------------- Main content ------------------------------------------------------->
+        <div class="main-content">
+            <div class="write-post">
+                <div class="user-profile">
+                    <img src="profile-img/amit.jpg">
+                    <div>
+                        <p>Amit Kumar</p>
+                    </div>
+                </div>
+                <div class="Post-input">
+                    <textarea rows="3" placeholder= "Write a Caption"></textarea>
+                    <div class="add-post">
+                       <div class="add-video">
+                        <input type="file" accept="video/*">
+                        <a><span class="add-post-video">
+                            <ion-icon name="videocam"></ion-icon></span><p>VIdeo</p></a>
+                       </div>
+                            <div class="add-image">
+                                <input type="file" accept="image/*">
+                                <a><span class="add-post-image">
+                                    <ion-icon name="image"></ion-icon></span><p>Image</p></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-contents">
+                <div class="user-profile">
+                    <img src="profile-img/amit.jpg">
+                    <div>
+                        <h3>Amit Kumar</h3>
+                        <span>August 07 2023, 12:06am</span>
+                    </div>
+            </div>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur <span>@besocial</span> adipisicing elit.
+                 Aliquam quibusdam ea quod sequi porro. 
+                 Esse ab est magni quo dolorum atque sequi<a href="#">#JaiMataDi</a><a href="#">#JaiMahishmati</a></p>
+                 <img src="profile-img/amit image.jpg" class="post-imgage">
+                 <div class="post-row">
+                    <div class="activity-icons">
+                        <a><span class="like"><ion-icon name="thumbs-up-outline"></ion-icon></span>24</a>
+                        <a><span class="comment"><ion-icon name="chatbubble-outline"></ion-icon></span>8</a>
+                        <a><span class="share"><ion-icon name="arrow-redo-outline"></ion-icon></ion-icon></span>4</a>
+                        
+                    </div>
+                 </div>
+            </div>
+            <div class="post-contents">
+                <div class="user-profile">
+                    <img src="profile-img/naveen.jpg">
+                    <div>
+                        <h3>Naveen Kumar</h3>
+                        <span>August 07 2023, 12:06am</span>
+                    </div>
+            </div>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur <span>@besocial</span> adipisicing elit.
+                 Aliquam quibusdam ea quod sequi porro. 
+                 Esse ab est magni quo dolorum atque sequi<a href="#">#JaiMataDi</a><a href="#">#JaiMahishmati</a></p>
+                 <img src="profile-img/naveen.jpg" class="post-imgage">
+                 <div class="post-row">
+                    <div class="activity-icons">
+                        <a><span class="like"><ion-icon name="thumbs-up-outline"></ion-icon></span>24</a>
+                        <a><span class="comment"><ion-icon name="chatbubble-outline"></ion-icon></span>8</a>
+                        <a><span class="share"><ion-icon name="arrow-redo-outline"></ion-icon></ion-icon></span>4</a>
+                        
+                    </div>
+                 </div>
+            </div>
+            <div class="post-contents">
+                <div class="user-profile">
+                    <img src="profile-img/happyraj.jpg">
+                    <div>
+                        <h3>Happy Raj</h3>
+                        <span>August 07 2023, 12:06am</span>
+                    </div>
+            </div>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur <span>@besocial</span> adipisicing elit.
+                 Aliquam quibusdam ea quod sequi porro. 
+                 Esse ab est magni quo dolorum atque sequi<a href="#">#JaiMataDi</a><a href="#">#JaiMahishmati</a></p>
+                 <img src="profile-img/happy.jpg" class="post-imgage">
+                 <div class="post-row">
+                    <div class="activity-icons">
+                        <a><span class="like"><ion-icon name="thumbs-up-outline"></ion-icon></span>24</a>
+                        <a><span class="comment"><ion-icon name="chatbubble-outline"></ion-icon></span>8</a>
+                        <a><span class="share"><ion-icon name="arrow-redo-outline"></ion-icon></ion-icon></span>4</a>
+                        
+                    </div>
+                 </div>
+            </div>
+            <div class="post-contents">
+                <div class="user-profile">
+                    <img src="profile-img/aditya singh.jpg">
+                    <div>
+                        <h3>Aditya Singh</h3>
+                        <span>August 07 2023, 12:06am</span>
+                    </div>
+            </div>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur <span>@besocial</span> adipisicing elit.
+                 Aliquam quibusdam ea quod sequi porro. 
+                 Esse ab est magni quo dolorum atque sequi<a href="#">#JaiMataDi</a><a href="#">#JaiMahishmati</a></p>
+                 <img src="profile-img/aditya singh.jpg" class="post-imgage">
+                 <div class="post-row">
+                    <div class="activity-icons">
+                        <a><span class="like"><ion-icon name="thumbs-up-outline"></ion-icon></span>24</a>
+                        <a><span class="comment"><ion-icon name="chatbubble-outline"></ion-icon></span>8</a>
+                        <a><span class="share"><ion-icon name="arrow-redo-outline"></ion-icon></ion-icon></span>4</a>
+                        
+                    </div>
+                 </div>
+            </div>
+            <div class="post-contents">
+                <div class="user-profile">
+                    <img src="profile-img/aditya.jpg">
+                    <div>
+                        <h3>Aditya Saini</h3>
+                        <span>August 07 2023, 12:06am</span>
+                    </div>
+            </div>
+            <p class="post-text">Lorem ipsum dolor sit amet consectetur <span>@besocial</span> adipisicing elit.
+                 Aliquam quibusdam ea quod sequi porro. 
+                 Esse ab est magni quo dolorum atque sequi<a href="#">#JaiMataDi</a><a href="#">#JaiMahishmati</a></p>
+                 <img src="profile-img/aditya.jpg" class="post-imgage">
+                 <div class="post-row">
+                    <div class="activity-icons">
+                        <a><span class="like"><ion-icon name="thumbs-up-outline"></ion-icon></span>24</a>
+                        <a><span class="comment"><ion-icon name="chatbubble-outline"></ion-icon></span>8</a>
+                        <a><span class="share"><ion-icon name="arrow-redo-outline"></ion-icon></ion-icon></span>4</a>
+                        
+                    </div>
+                 </div>
+            </div>
+            <button type="button" class="load-more">Load More</button>
+        </div>
+        <!--------------------------------------------------------------- right-sidebar ----------------------------------------------------->
+        <div class="right-sidebar">
+            <div class="sidebar-ads">
+                <div class="sidebar-title">
+                    <h4>Advertisement</h4>
+                </div>
+                <img src="advertisement.jpg" class="sidebar-ads-img">
+    
+            </div>
+            <div class="Conversation">
+                <div class="sidebar-title">
+                    <h4>Conversation</h4>
+                </div>
+                <div class="online-list">
+                    <div class="online">
+                        <img src="profile-img/naveen.jpg">
+                    </div>
+                    <a href="#"><p>Naveen Kumar</p></a>
+                </div>
+                <div class="online-list">
+                    <div class="online">
+                        <img src="profile-img/happyraj.jpg">
+                    </div>
+                    <a href="#"><p>Happy Raj</p></a>
+                </div>
+                <div class="online-list">
+                    <div class="online">
+                        <img src="profile-img/aditya.jpg">
+                    </div>
+                    <a href="#"><p>Aditya Saini</p></a>
+                </div>
+                <div class="online-list">
+                    <div class="online">
+                        <img src="profile-img/aditya singh.jpg">
+                    </div>
+                    <a href="#"><p>Aditya Singh</p></a>
+                </div>
+                <div class="online-list">
+                    <div class="online">
+                        <img src="profile-img/amit.jpg">
+                    </div>
+                    <a href="#"><p>You</p></a>
+                </div>
+                <!-- <button type="button" class="load-more">Load More</button> -->
+          </div>
+            </div>
+           
+    </div>
+    <!--------------------------------------------------------------------- JS ------------------------------------------------------------->
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+</body>
+</html>
